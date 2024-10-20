@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> VEHICLE RENTAL WEBSITE</title>
+    <!-- Link to CSS --->
+    <link rel="stylesheet" href="style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo"><img
+                src="https://e7.pngegg.com/pngimages/973/941/png-clipart-car-vehicle-motorcycle-fleet-management-truck-car-van-mode-of-transport.png"
+                alt=""></a>
+
+        <div class="bx bx-menu" href="box-icon name='menu'>/box-icon>"><id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#ride">Ride</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+
+        <!-- Sign Up Button -->
+        <button class="sign-up">Sign Up</button>
+
+        <!-- Sign In Button -->
+        <button class="sign-in">Sign In</button>
+
+        <!-- Sign Up Modal -->
+        <div id="signUpModal" class="modal">
+            <div class="modal-content">
+                <span id="closeSignUp" class="close">&times;</span>
+                <h2>Sign Up</h2>
+                <form id="signUpForm">
+                    <input type="text" id="signup-username" placeholder="Username" required><br>
+                    <input type="email" id="signup-email" placeholder="Email" required><br>
+                    <input type="password" id="signup-password" placeholder="Password" required><br>
+                    <input type="text" id="signup-address" placeholder="Address" required><br>
+                    <input type="text" id="signup-mobile" placeholder="Mobile" required><br>
+                    <button class="btn" type="submit" id="signup-submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sign In Modal -->
+        <div id="signInModal" class="modal">
+            <div class="modal-content">
+                <span id="closeSignIn" class="close">&times;</span>
+                <h2>Sign In</h2>
+                <form id="signInForm">
+                    <input type="email" id="signin-email" placeholder="Email" required><br>
+                    <input type="password" id="signin-password" placeholder="Password" required><br>
+                    <button class="btn" type="submit" id="signin-submit">Sign In</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+    </header>
+    <!--Home-->
+    <section class="home" id="home">
+        <div class="text">
+            <h1><span>Looking</span> to <br>rent a vehicle</h1>
+            <p>Unlock the joy of travel with our seamless vehicle rental service,where your journey is personalised,your ride is guaranteed,and your satisfaction is our top priority.</p>
+        </div>
+        <div class="home" id="home">
+            <img src="https://e7.pngegg.com/pngimages/973/941/png-clipart-car-vehicle-motorcycle-fleet-management-truck-car-van-mode-of-transport.png"
+            alt=""></a>
+        </div>
+
+        <!-- <div class="form-container">
+            <form action="">
+                <div class="input-box">
+                    <span> Location</span>
+                    <input type="search" name="" id="" placeholder="Search Places">
+                </div>
+                <div class="input-box">
+                    <span>Pick-Up Date</span>
+                    <input type="date" name="" id="">
+                </div>
+                <div class="input-box">
+                    <span>Return Date</span>
+                    <input type="date" name="" id="">
+                </div>
+                <input type="submit" name="" id="" class="btn">
+
+            </form>
+        </div> -->
+    </section>
+    <!--Ride-->
+    <section class="ride" id="ride">
+        <div class="heading">
+            <span>How Its Work</span>
+            <h1>Rent with 3 Easy Steps</h1>
+        </div>
+        <div class="ride-container">
+            <div class="box">
+                <i class='bx bxs-map'></i>
+                <h2>Choose a Location</h2>
+                <p>Enter your address when the website is asking so that it can save your address as default.You can change the address later.</p>
+            </div>
+
+            <div class="box">
+                <i class='bx bxs-calendar-check'></i>
+                <h2>Pick-Up Date</h2>
+                <p>Enter your pickup date so that the vehicle will be serviced to your door on date</p>
+                </div>
+
+            <div class="box">
+                <i class='bx bxs-calendar-star'></i>
+                <h2>Book a Car/Bike/Bus</h2>
+                <p>Now book a vehicle that are available in the Services page.Click RentNow and Enter every detail correctly.</p>
+            </div>
+        </div>
+    </section>
+    <!--services-->
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Best Services</span>
+            <h1>Explore Out top deals <br> From Top Rated Dealers</h1>
+        </div>
+        <!-- <div class="services-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://imgd.aeplcdn.com/1200x900/n/cw/ec/174975/wrangler-facelift-exterior-right-front-three-quarter.jpeg?isig=0&q=80"
+                        alt="2024 Wrangler">
+                </div>
+                <p>2024</p>
+                <h3>2024 Wrangler</h3>
+                <h2>$58500 | $358 <span>/month</span></h2>
+                <button class="btn" id="rent-btn1">Rent Now</button>
+            </div>
+
+            <div id="popup-form" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form">
+                        <label for="pickup-address">Pickup Address:</label>
+                        <input type="text" id="pickup-address" name="pickupAddress" required>
+
+                        <label for="pickup-date">Pickup Date:</label>
+                        <input type="date" id="pickup-date" name="pickupDate" required>
+
+                        <label for="return-date">Return Date:</label>
+                        <input type="date" id="return-date" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://imgd.aeplcdn.com/1200x900/n/cw/ec/174975/wrangler-facelift-exterior-right-front-three-quarter.jpeg?isig=0&q=80"
+                        alt="2024 Wrangler">
+                </div>
+                <p>2024</p>
+                <h3>2024 Wrangler</h3>
+                <h2>$58500 | $358 <span>/month</span></h2>
+                <button class="btn" id="rent-btn">Rent Now</button>
+            </div>
+
+            
+            <div id="popup-form" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form">
+                        <label for="pickup-address">Pickup Address:</label>
+                        <input type="text" id="pickup-address" name="pickupAddress" required>
+
+                        <label for="pickup-date">Pickup Date:</label>
+                        <input type="date" id="pickup-date" name="pickupDate" required>
+
+                        <label for="return-date">Return Date:</label>
+                        <input type="date" id="return-date" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://www.mychoize.com/mychoize-live/current/files/fleets/Hyundai_Creta.jpg"
+                        alt="2024 Wrangler">
+                </div>
+                <p>2024</p>
+                <h3>2024 Wrangler</h3>
+                <h2>$58500 | $358 <span>/month</span></h2>
+                <button class="btn" id="rent-btn">Rent Now</button>
+            </div>
+
+            
+            <div id="popup-form" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form">
+                        <label for="pickup-address">Pickup Address:</label>
+                        <input type="text" id="pickup-address" name="pickupAddress" required>
+
+                        <label for="pickup-date">Pickup Date:</label>
+                        <input type="date" id="pickup-date" name="pickupDate" required>
+
+                        <label for="return-date">Return Date:</label>
+                        <input type="date" id="return-date" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://www.otocapital.in/_next/image?url=https%3A%2F%2Fassets.otocapital.in%2Fstaging%2Fce4e3cd9-9d24-4919-bd88-32315076a79b.png&w=1024&q=75"
+                        alt="2024 Wrangler">
+                </div>
+                <p>2024</p>
+                <h3>2024 Wrangler</h3>
+                <h2>$58500 | $358 <span>/month</span></h2>
+                <button class="btn" id="rent-btn">Rent Now</button>
+            </div>
+
+            
+            <div id="popup-form" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form">
+                        <label for="pickup-address">Pickup Address:</label>
+                        <input type="text" id="pickup-address" name="pickupAddress" required>
+
+                        <label for="pickup-date">Pickup Date:</label>
+                        <input type="date" id="pickup-date" name="pickupDate" required>
+
+                        <label for="return-date">Return Date:</label>
+                        <input type="date" id="return-date" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://3.imimg.com/data3/KB/WP/MY-9034693/bus-rental-service-sleeper-coach-500x500.jpg"
+                        alt="2024 Wrangler">
+                </div>
+                <p>2024</p>
+                <h3>2024 Wrangler</h3>
+                <h2>$58500 | $358 <span>/month</span></h2>
+                <button class="btn" id="rent-btn">Rent Now</button>
+            </div>
+
+            
+            <div id="popup-form" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form">
+                        <label for="pickup-address">Pickup Address:</label>
+                        <input type="text" id="pickup-address" name="pickupAddress" required>
+
+                        <label for="pickup-date">Pickup Date:</label>
+                        <input type="date" id="pickup-date" name="pickupDate" required>
+
+                        <label for="return-date">Return Date:</label>
+                        <input type="date" id="return-date" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://3.imimg.com/data3/KB/WP/MY-9034693/bus-rental-service-sleeper-coach-500x500.jpg"
+                        alt="2024 Wrangler">
+                </div>
+                <p>2024</p>
+                <h3>2024 Wrangler</h3>
+                <h2>$58500 | $358 <span>/month</span></h2>
+                <button class="btn" id="rent-btn">Rent Now</button>
+            </div>
+
+            
+            <div id="popup-form" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form">
+                        <label for="pickup-address">Pickup Address:</label>
+                        <input type="text" id="pickup-address" name="pickupAddress" required>
+
+                        <label for="pickup-date">Pickup Date:</label>
+                        <input type="date" id="pickup-date" name="pickupDate" required>
+
+                        <label for="return-date">Return Date:</label>
+                        <input type="date" id="return-date" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://bd.gaadicdn.com/processedimages/yamaha/mt-15-2-0/source/mt-15-2-06613f885e681c.jpg"
+                        alt="2024 Wrangler">
+                </div>
+                <p>2024</p>
+                <h3>2024 Wrangler</h3>
+                <h2>$58500 | $358 <span>/month</span></h2>
+                <button class="btn" id="rent-btn">Rent Now</button>
+            </div>
+
+            
+            <div id="popup-form" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form">
+                        <label for="pickup-address">Pickup Address:</label>
+                        <input type="text" id="pickup-address" name="pickupAddress" required>
+
+                        <label for="pickup-date">Pickup Date:</label>
+                        <input type="date" id="pickup-date" name="pickupDate" required>
+
+                        <label for="return-date">Return Date:</label>
+                        <input type="date" id="return-date" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://www.muthootcap.com/wp-content/uploads/2022/10/Ather-450X.jpg" alt="2024 Wrangler">
+                </div>
+                <p>2024</p>
+                <h3>2024 Wrangler</h3>
+                <h2>$58500 | $358 <span>/month</span></h2>
+                <button class="btn" id="rent-btn">Rent Now</button>
+            </div>
+
+            
+            <div id="popup-form" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form">
+                        <label for="pickup-address">Pickup Address:</label>
+                        <input type="text" id="pickup-address" name="pickupAddress" required>
+
+                        <label for="pickup-date">Pickup Date:</label>
+                        <input type="date" id="pickup-date" name="pickupDate" required>
+
+                        <label for="return-date">Return Date:</label>
+                        <input type="date" id="return-date" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div> -->
+
+        <div class="services-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://imgd.aeplcdn.com/1200x900/n/cw/ec/174975/wrangler-facelift-exterior-right-front-three-quarter.jpeg?isig=0&q=80"
+                        alt="2024 Wrangler">
+                </div>
+                <p>2024</p>
+                <h3>2024 Wrangler</h3>
+                <h2>1500/-<span>per day</span></h2>
+                <button class="btn" id="rent-btn1">Rent Now</button>
+            </div>
+
+            <!-- Popup Form Modal 1 -->
+            <div id="popup-form1" class="modal">
+                <div class="modal-content">
+                    <span class="close1">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form1">
+                        <label for="vehicle-model1">Vehicle Model:</label>
+                        <input type="text" id="vehicle-model1" name="vehicleModel" required>
+
+                        <label for="mobile1">Mobile Number:</label>
+                        <input type="tel" id="mobile1" name="mobile" required>
+
+                        <label for="pickup-address1">Pickup Address:</label>
+                        <input type="text" id="pickup-address1" name="pickupAddress" required>
+
+                        <label for="pickup-date1">Pickup Date:</label>
+                        <input type="date" id="pickup-date1" name="pickupDate" required>
+
+                        <label for="return-date1">Return Date:</label>
+                        <input type="date" id="return-date1" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://www.mychoize.com/mychoize-live/current/files/fleets/Hyundai_Creta.jpg" alt="">
+                </div>
+                <p>2024</p>
+                <h3>Ford</h3>
+                <h2>1700/-<span>per day</span></h2>
+                <button class="btn" id="rent-btn2">Rent Now</button>
+            </div>
+
+            <!-- Popup Form Modal 2 -->
+            <div id="popup-form2" class="modal">
+                <div class="modal-content">
+                    <span class="close2">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form2">
+                        <label for="vehicle-model2">Vehicle Model:</label>
+                        <input type="text" id="vehicle-model2" name="vehicleModel" required>
+
+                        <label for="mobile2">Mobile Number:</label>
+                        <input type="tel" id="mobile2" name="mobile" required>
+
+                        <label for="pickup-address2">Pickup Address:</label>
+                        <input type="text" id="pickup-address2" name="pickupAddress" required>
+
+                        <label for="pickup-date2">Pickup Date:</label>
+                        <input type="date" id="pickup-date2" name="pickupDate" required>
+
+                        <label for="return-date2">Return Date:</label>
+                        <input type="date" id="return-date2" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://www.muthootcap.com/wp-content/uploads/2022/10/Ather-450X.jpg" alt="">
+                </div>
+                <p>2024</p>
+                <h3>TVS Jupiter</h3>
+                <h2>600/- <span>per day</span></h2>
+                <button class="btn" id="rent-btn3">Rent Now</button>
+            </div>
+
+            <!-- Popup Form Modal 3 -->
+            <div id="popup-form3" class="modal">
+                <div class="modal-content">
+                    <span class="close3">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form3">
+                        <label for="vehicle-model3">Vehicle Model:</label>
+                        <input type="text" id="vehicle-model3" name="vehicleModel" required>
+
+                        <label for="mobile3">Mobile Number:</label>
+                        <input type="tel" id="mobile3" name="mobile" required>
+
+                        <label for="pickup-address3">Pickup Address:</label>
+                        <input type="text" id="pickup-address3" name="pickupAddress" required>
+
+                        <label for="pickup-date3">Pickup Date:</label>
+                        <input type="date" id="pickup-date3" name="pickupDate" required>
+
+                        <label for="return-date3">Return Date:</label>
+                        <input type="date" id="return-date3" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://bd.gaadicdn.com/processedimages/yamaha/mt-15-2-0/source/mt-15-2-06613f885e681c.jpg"
+                        alt="">
+                </div>
+                <p>2024</p>
+                <h3>KTM 200 Duke</h3>
+                <h2>800/-<span>per day</span></h2>
+                <button class="btn" id="rent-btn4">Rent Now</button>
+            </div>
+
+            <!-- Popup Form Modal 4 -->
+            <div id="popup-form4" class="modal">
+                <div class="modal-content">
+                    <span class="close4">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form4">
+                        <label for="vehicle-model4">Vehicle Model:</label>
+                        <input type="text" id="vehicle-model4" name="vehicleModel" required>
+
+                        <label for="mobile4">Mobile Number:</label>
+                        <input type="tel" id="mobile4" name="mobile" required>
+
+                        <label for="pickup-address4">Pickup Address:</label>
+                        <input type="text" id="pickup-address4" name="pickupAddress" required>
+
+                        <label for="pickup-date4">Pickup Date:</label>
+                        <input type="date" id="pickup-date4" name="pickupDate" required>
+
+                        <label for="return-date4">Return Date:</label>
+                        <input type="date" id="return-date4" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://3.imimg.com/data3/KB/WP/MY-9034693/bus-rental-service-sleeper-coach-500x500.jpg"
+                        alt="">
+                </div>
+                <p>2024</p>
+                <h3>Ashok Layland</h3>
+                <h2>5000/-<span>per day</span></h2>
+                <button class="btn" id="rent-btn5">Rent Now</button>
+            </div>
+
+            <!-- Popup Form Modal 5 -->
+            <div id="popup-form5" class="modal">
+                <div class="modal-content">
+                    <span class="close5">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form5">
+                        <label for="vehicle-model5">Vehicle Model:</label>
+                        <input type="text" id="vehicle-model5" name="vehicleModel" required>
+
+                        <label for="mobile5">Mobile Number:</label>
+                        <input type="tel" id="mobile5" name="mobile" required>
+
+                        <label for="pickup-address5">Pickup Address:</label>
+                        <input type="text" id="pickup-address5" name="pickupAddress" required>
+
+                        <label for="pickup-date5">Pickup Date:</label>
+                        <input type="date" id="pickup-date5" name="pickupDate" required>
+
+                        <label for="return-date5">Return Date:</label>
+                        <input type="date" id="return-date5" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://www.otocapital.in/_next/image?url=https%3A%2F%2Fassets.otocapital.in%2Fstaging%2Fce4e3cd9-9d24-4919-bd88-32315076a79b.png&w=1024&q=75"
+                        alt="">
+                </div>
+                <p>2024</p>
+                <h3>Splendor</h3>
+                <h2>300/- <span>per day</span></h2>
+                <button class="btn" id="rent-btn6">Rent Now</button>
+            </div>
+
+            <!-- Popup Form Modal 6 -->
+            <div id="popup-form6" class="modal">
+                <div class="modal-content">
+                    <span class="close6">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form6">
+                        <label for="vehicle-model6">Vehicle Model:</label>
+                        <input type="text" id="vehicle-model6" name="vehicleModel" required>
+
+                        <label for="mobile6">Mobile Number:</label>
+                        <input type="tel" id="mobile6" name="mobile" required>
+
+                        <label for="pickup-address6">Pickup Address:</label>
+                        <input type="text" id="pickup-address6" name="pickupAddress" required>
+
+                        <label for="pickup-date6">Pickup Date:</label>
+                        <input type="date" id="pickup-date6" name="pickupDate" required>
+
+                        <label for="return-date6">Return Date:</label>
+                        <input type="date" id="return-date6" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://content.jdmagicbox.com/v2/comp/chennai/c3/044pxx44.xx44.230104194138.c9c3/catalogue/colourful-self-driven-cars-old-washermanpet-chennai-car-rental-for-self-driven-igqsvulhxn.jpg"
+                        alt="">
+                </div>
+                <p>2024</p>
+                <h3>TOYOTA</h3>
+                <h2>1400/-<span>per day</span></h2>
+                <button class="btn" id="rent-btn7">Rent Now</button>
+            </div>
+
+            <!-- Popup Form Modal 7 -->
+            <div id="popup-form7" class="modal">
+                <div class="modal-content">
+                    <span class="close7">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form7">
+                        <label for="vehicle-model7">Vehicle Model:</label>
+                        <input type="text" id="vehicle-model7" name="vehicleModel" required>
+
+                        <label for="mobile7">Mobile Number:</label>
+                        <input type="tel" id="mobile7" name="mobile" required>
+
+                        <label for="pickup-address7">Pickup Address:</label>
+                        <input type="text" id="pickup-address7" name="pickupAddress" required>
+
+                        <label for="pickup-date7">Pickup Date:</label>
+                        <input type="date" id="pickup-date7" name="pickupDate" required>
+
+                        <label for="return-date7">Return Date:</label>
+                        <input type="date" id="return-date7" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="https://assets.volvo.com/is/image/VolvoInformationTechnologyAB/blue-bus?qlt=82&wid=1024&ts=1660212095501&dpr=off&fit=constrain"
+                        alt="">
+                </div>
+                <p>2024</p>
+                <h3>Volvo</h3>
+                <h2>6500/-<span>per day</span></h2>
+                <button class="btn" id="rent-btn8">Rent Now</button>
+            </div>
+
+            <!-- Popup Form Modal 8 -->
+            <div id="popup-form8" class="modal">
+                <div class="modal-content">
+                    <span class="close8">&times;</span>
+                    <h2>Complete Your Order</h2>
+                    <form id="order-form8">
+                        <label for="vehicle-model8">Vehicle Model:</label>
+                        <input type="text" id="vehicle-model8" name="vehicleModel" required>
+
+                        <label for="mobile8">Mobile Number:</label>
+                        <input type="tel" id="mobile8" name="mobile" required>
+
+                        <label for="pickup-address8">Pickup Address:</label>
+                        <input type="text" id="pickup-address8" name="pickupAddress" required>
+
+                        <label for="pickup-date8">Pickup Date:</label>
+                        <input type="date" id="pickup-date8" name="pickupDate" required>
+
+                        <label for="return-date8">Return Date:</label>
+                        <input type="date" id="return-date8" name="returnDate" required>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!--About-->
+    <section class="about" id="about">
+        <div class="heading">
+            <span>About Us</span>
+            <h1>Best Customer Experience</h1>
+        </div>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="https://imgd-ct.aeplcdn.com/664x415/cw/ec/41418/Jeep-New-Wrangler-Exterior-164856.jpg?wm=0&q=80"
+                    alt="">
+            </div>
+            <div class="about-text">
+                <span>About Us</span>
+                <p>We specialize in providing a diverse fleet of high-quality vehicles to meet all your travel
+                    needs.Whether you're planning a family vacation,a business trip,or need a vehicle for special
+                    events,we have the perfect solution for you.</p>
+                <p>Our mission is to deliver exceptional service and a seamless rental experience.With a focus on
+                    customer satisfaction,we prioritize safety,convenience,and affordability.Our team is dedicated to
+                    helping you find the right vehicle,ensuring that your journey is enjoyable from start to finish.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+    </section>
+    <!--Reviews-->
+    <section class="reviews" id="reviews">
+        <div class="heading">
+            <span>Reviews</span>
+            <h1>Whats Our Customer Say</h1>
+        </div>
+        <div class="reviews-container">
+            <div class="box">
+                <div class="rev-img">
+                    <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/04/28/09/normal-people-0.jpg"
+                        alt="">
+                </div>
+                <h2>Albert Paul</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <p>Such a wonderful and great response from the administration.We are very happy that we find a website
+                    that is helpful for immediate instances.I like the way they deliver on time!!!</p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="https://static01.nyt.com/images/2020/04/28/arts/28normal-1/merlin_171979443_6da4098e-03f8-40ba-bfc5-487658f91f28-superJumbo.jpg"
+                        alt="">
+                </div>
+                <h2>Sony Micky</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <p>Have a wonderful Experience with them.I hope you will continue this type of service
+                    everytime.Greatjob!!</p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="https://www.shutterstock.com/image-photo/beautiful-young-woman-studio-looking-260nw-139247903.jpg"
+                        alt="">
+                </div>
+                <h2>Mythri Minkil</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <p>Very happy that I took a correct website.I was satisfied with their service.The vehicle is perfect
+                    for its functioning without having any other problem.Well Done!!!</p>
+            </div>
+        </div>
+    </section>
+    <!--NwsLetter-->
+    <section class="newsletter">
+        <h2>Subscribe To Newsletter</h2>
+        <div class="box">
+            <input type="text" placeholder="Enter Your Email...">
+            <a href="" class="btn">Subscribe</a>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>&#169; VRW All Rights Reserved</p>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+        </div>
+    </div>
+
+
+
+
+    <!-- Link to js -->
+    <script src="main.js"></script>
+</body>
+
+</html>
