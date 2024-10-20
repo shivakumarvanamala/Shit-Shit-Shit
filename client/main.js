@@ -8,6 +8,8 @@ var signInBtn = document.querySelector(".sign-in");
 var closeSignUp = document.getElementById("closeSignUp");
 var closeSignIn = document.getElementById("closeSignIn");
 
+var userDisplay = document.getElementById("user-display"); // Element to show username
+
 // Show SignUp modal when SignUp button is clicked
 signUpBtn.onclick = function () {
   signUpModal.style.display = "block";
@@ -44,96 +46,95 @@ const disableButton = (button) => {
   button.innerHTML = "Processing...";
 };
 
+// Update UI to show the user's name
+const updateUIWithUsername = (username) => {
+  userDisplay.innerHTML = `Welcome, <strong>${username} <spam>👋</span></strong>`;
+  signUpBtn.style.display = "none";
+  signInBtn.style.display = "none";
+  userDisplay.style.display = "block"; // Make sure this is visible
+};
+
 // signUp form submission
-document
-  .getElementById("signUpForm")
-  .addEventListener("submit", async (event) => {
-    event.preventDefault();
+document.getElementById("signUpForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-    const signupData = {
-      username: document.getElementById("signup-username").value,
-      email: document.getElementById("signup-email").value,
-      password: document.getElementById("signup-password").value,
-      address: document.getElementById("signup-address").value,
-      mobile: document.getElementById("signup-mobile").value,
-    };
+  const signupData = {
+    username: document.getElementById("signup-username").value,
+    email: document.getElementById("signup-email").value,
+    password: document.getElementById("signup-password").value,
+    address: document.getElementById("signup-address").value,
+    mobile: document.getElementById("signup-mobile").value,
+  };
 
-    const submitButton = document.getElementById("signup-submit");
-    disableButton(submitButton);
+  const submitButton = document.getElementById("signup-submit");
+  disableButton(submitButton);
 
-    try {
-      const response = await fetch("http://localhost:8080/api/auth/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(signupData),
-      });
+  try {
+    const response = await fetch("http://localhost:8080/api/auth/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(signupData),
+    });
 
-      const data = await response.json();
+    const data = await response.json();
 
-      if (!response.ok) {
-        throw { response: { data } };
-      }
-
-      alert(data.message);
-      signUpModal.style.display = "none";
-
-      const signUpButton = document.querySelector(".sign-up");
-      signUpButton.style.display = "none";
-      const signInButton = document.querySelector(".sign-in");
-      signInButton.style.display = "none";
-    } catch (error) {
-      if (error.response && error.response.data) {
-        alert(error.response.data.message);
-      } else {
-        alert("An unexpected error occurred. Please try again.");
-      }
-      submitButton.disabled = true;
+    if (!response.ok) {
+      throw { response: { data } };
     }
-  });
 
-document
-  .getElementById("signInForm")
-  .addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const signinData = {
-      email: document.getElementById("signin-email").value,
-      password: document.getElementById("signin-password").value,
-    };
-
-    const submitButton = document.getElementById("signin-submit");
-    disableButton(submitButton);
-
-    try {
-      const response = await fetch("http://localhost:8080/api/auth/signin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(signinData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw { response: { data } };
-      }
-
-      alert(data.message);
-
-      signInModal.style.display = "none";
-      const signUpButton = document.querySelector(".sign-up");
-      signUpButton.style.display = "none";
-      const signInButton = document.querySelector(".sign-in");
-      signInButton.style.display = "none";
-    } catch (error) {
-      console.error(error.response.data);
-      alert("Sign-in failed. Try again.");
-      submitButton.disabled = true;
-      // submitButton.innerHTML = "Sign In";
+    alert(data.message);
+    signUpModal.style.display = "none";
+    updateUIWithUsername(data.username); // Replace buttons with username
+  } catch (error) {
+    if (error.response && error.response.data) {
+      alert(error.response.data.message);
+    } else {
+      alert("An unexpected error occurred. Please try again.");
     }
-  });
+    submitButton.disabled = true;
+  }
+});
+
+// signIn form submission
+document.getElementById("signInForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const signinData = {
+    email: document.getElementById("signin-email").value,
+    password: document.getElementById("signin-password").value,
+  };
+
+  const submitButton = document.getElementById("signin-submit");
+  disableButton(submitButton);
+
+  try {
+    const response = await fetch("http://localhost:8080/api/auth/signin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(signinData),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw { response: { data } };
+    }
+
+    alert(data.message);
+    signInModal.style.display = "none";
+    updateUIWithUsername(data.username); // Replace buttons with username
+  } catch (error) {
+    console.error(error.response.data);
+    alert("Sign-in failed. Try again.");
+    submitButton.disabled = true;
+  }
+});
+
+
 
 // // Get the modal, button, close elements
 // const modal = document.getElementById("popup-form");

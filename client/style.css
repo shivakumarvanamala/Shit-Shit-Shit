@@ -571,6 +571,7 @@ button.btn {
 button.btn:hover {
   background-color: #555;
 }
+
 /* Submit Button Styles */
 button[type="submit"] {
   background-color: #007bff;
@@ -612,22 +613,30 @@ button.btn:hover {
 
 /* Basic Modal Styles */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* Center vertically */
+  margin: 15% auto;
+  /* Center vertically */
   padding: 20px;
   border: 1px solid #888;
-  width: 30%; /* Width of the modal */
+  width: 30%;
+  /* Width of the modal */
   border-radius: 10px;
 }
 
@@ -668,7 +677,8 @@ button.sign-in {
 
 /* Modal Styling */
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -688,10 +698,14 @@ button.sign-in {
 
 .modal-content {
   background-color: #fff;
-  position: absolute; /* Change this to absolute for centering */
-  left: 50%; /* Center horizontally */
-  top: 25%; /* Center vertically */
-  transform: translate(-50%, -50%); /* Adjust position to truly center it */
+  position: absolute;
+  /* Change this to absolute for centering */
+  left: 50%;
+  /* Center horizontally */
+  top: 25%;
+  /* Center vertically */
+  transform: translate(-50%, -50%);
+  /* Adjust position to truly center it */
   padding: 20px;
   border-radius: 10px;
   width: 30%;
@@ -717,7 +731,8 @@ button.sign-in {
 
 /* Modal Styling */
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -755,7 +770,8 @@ button.sign-in {
 }
 
 .btn:hover {
-  background-color: #218838; /* Darker green on hover */
+  background-color: #218838;
+  /* Darker green on hover */
 }
 
 /* Services container styling */
@@ -774,13 +790,15 @@ button.sign-in {
   margin: 10px;
   padding: 15px;
   text-align: center;
-  width: calc(25% - 40px); /* 4 boxes per row, adjust for margin */
+  width: calc(25% - 40px);
+  /* 4 boxes per row, adjust for margin */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
 .box:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
 }
 
 /* Image styling */
@@ -804,13 +822,18 @@ button.sign-in {
   margin: 5px 0;
   color: #6c757d;
 }
+
 .home img {
   max-width: 100%;
   max-height: 80vh;
-  object-fit: contain; /* Ensures the image maintains its aspect ratio */
-  border-radius: 10px; /* Optional rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  object-fit: contain;
+  /* Ensures the image maintains its aspect ratio */
+  border-radius: 10px;
+  /* Optional rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Adds subtle shadow */
 }
+
 .ride {
   padding: 50px 20px;
   background-color: #fff;
@@ -883,10 +906,57 @@ button.sign-in {
 /* Responsive Design */
 @media (max-width: 768px) {
   .ride-container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .ride-container .box {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+#user-display {
+  display: none;
+  color: #4a4a4a;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px 25px;
+  text-align: center;
+  margin-top: 20px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+#user-display strong {
+  color: #f39c12;
+}
+
+#user-display span {
+  display: inline-block;
+  animation: wave 1s infinite;
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-5px);
+  }
+
+  40% {
+    transform: translateY(0);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+
+  80% {
+    transform: translateY(0);
   }
 }
